@@ -5,11 +5,11 @@ from random import randrange
 
 def isPrime(n):
 	"""
-    Checks if a natural number is prime
+	Checks if a natural number is prime
 
-    :param n: the number (a positive integer) being checked
-    :return: boolean
-    """ 
+	:param n: the number (a positive integer) being checked
+	:return: boolean
+	""" 
 
 	# prime larger than sqrt(n) cannot divide n (Number Theory 101)
 	cap = int( n**(.5) )
@@ -25,14 +25,14 @@ def isPrime(n):
 
 def getFermatPrimes(n):
 	"""
-    Finds all "Fermat primes" less than or equal to a given
-    integer. Note: these numbers get large quickly, so this is
-    not ideal in real use for say, n > 100000. In fact,
-    currently the largest known Fermat Prime is 65537.
+	Finds all "Fermat primes" less than or equal to a given
+	integer. Note: these numbers get large quickly, so this is
+	not ideal in real use for say, n > 100000. In fact,
+	currently the largest known Fermat Prime is 65537.
 
-    :param n: the number (a positive integer) integer being checked
-    :return: boolean
-    """
+	:param n: the number (a positive integer) integer being checked
+	:return: boolean
+	"""
 
 	if n > 100000:
 		raise ValueError('''These numbers get large quickly.
@@ -59,16 +59,16 @@ def getFermatPrimes(n):
 
 def getDiaphantineSums(n, degree=2):
 	"""
-    Checks if n satisfies n^2 = a^2 + b^2 (a "Diophantine" equation)
-    for any two other positive integers a and b (a, b are not necessarily
-    distinct). Note: although a different degree than 2 can be passed
-    in, this will result in an empty collection returned (as a result
-    of Fermat's Last Theorem).
+	Checks if n satisfies n^2 = a^2 + b^2 (a "Diophantine" equation)
+	for any two other positive integers a and b (a, b are not necessarily
+	distinct). Note: although a different degree than 2 can be passed
+	in, this will result in an empty collection returned (as a result
+	of Fermat's Last Theorem).
 
-    :param n: the number (a positive integer) we square to get the sum
-    :param degree=2: number, the power on the three integers in the equation.
-    :return: boolean
-    """
+	:param n: the number (a positive integer) we square to get the sum
+	:param degree=2: number, the power on the three integers in the equation.
+	:return: boolean
+	"""
 
 	if degree > 2:
 		raise ValueError('No solutions exist for degree > 2 (Ferma\'s Last Theorem) ')
@@ -85,12 +85,12 @@ def getDiaphantineSums(n, degree=2):
 
 def guessPrimality(n, trials=3):
 	"""
-    Uses Fermat primality test to give an educated guess on if a number is prime
+	Uses Fermat primality test to give an educated guess on if a number is prime
 
-    :param n: the positive integer being checked for primality
-    :param trials=3: the number of random guesses applied in the test
-    :return: a string defining if n is composite or (assumed to be) prime
-    """
+	:param n: the positive integer being checked for primality
+	:param trials=3: the number of random guesses applied in the test
+	:return: a string defining if n is composite or (assumed to be) prime
+	"""
 
 	for i in range(trials):
 		guess = randrange(2, n - 1) # Fermat's test picks from 2 to n - 2 (inclusive)
