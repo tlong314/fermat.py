@@ -1,9 +1,10 @@
 # fermat.py
-A small Python script based on mathematical work of Pierre de Fermat
 
-## How to Test
+A small Python script based on mathematical work of Pierre de Fermat.
 
-Move to the directory where you have downloaded/cloned/etc. these scripts, and type the following command into your CLI to run the basic unit test:
+## How to Use
+
+Downloaded or clone these scripts, change your directory to that location. Then type the following command into your CLI to run the basic unit test:
 
 ```python
 python test.py
@@ -14,6 +15,7 @@ Or type the following to run the main file. Then you can run test() to view the 
 ```python
 python fermat.py
 ```
+
 ## fermat.py Functions
 
 The following functions are available in fermat.py:
