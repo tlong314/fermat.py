@@ -26,4 +26,4 @@ The following functions are available in fermat.py:
 
 - `getDiaphantineSums(n, degree=2)` - Finds and all positive integer solutions a and b to a^2 + b^2 = n^2 for the given n, and returns all those triplets that end with n (i.e., (a, b, n) and (b, a, n)). Note: by Fermat's Last Theorem, this is impossible when degree is an integer bigger than 2.
 
-- `guessPrimality(n, trials=3)` - Based on Fermat primality test (not for practical use), performs test on`trials` random integers less than n, using Fermat's Little Theorem to try and determine if n is composite or (most likely) prime.
+- `guessPrimality(n, trials=3)` - Based on Fermat primality test (not for practical use), performs test on `trials` random integers less than n, using Fermat's Little Theorem to try and determine if n is composite or (most likely) prime.
